@@ -1,0 +1,103 @@
+:root {
+  /* Brand Colors - Section 2.1 & Brand Identity */
+  --c-navy: #172A35;
+  --c-navy-dark: #0F1C23;
+  --c-navy-light: #233642;
+  --c-ivory: #F5F1E8;
+  --c-ivory-light: #FAF8F4;
+  --c-ivory-dark: #ECE5D7;
+  --c-greige: #C8C0B5;
+  --c-greige-light: #E4DFD8;
+  --c-greige-dark: #ADA294;
+  --c-slate: #596269;
+  --c-slate-light: #778087;
+  --c-slate-dark: #3E454B;
+  --c-champagne: #A99776;
+  --c-champagne-light: #C4B598;
+  --c-champagne-dark: #8A7755;
+
+  /* Typography */
+  --font-en-serif: 'Cormorant Garamond', 'Centaur', Georgia, serif;
+  --font-en-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-ar-serif: 'Amiri', 'A Suls', 'Noto Naskh Arabic', serif;
+  --font-ar-sans: 'Tajawal', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+
+  /* Spacing Scale */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-96: 96px;
+  --space-128: 128px;
+  --space-160: 160px;
+
+  /* Layout */
+  --max-width-container: 1360px;
+
+  /* Direction */
+  --dir: 1;
+}
+
+html[dir="rtl"] {
+  --dir: -1;
+  font-family: var(--font-ar-sans);
+}
+
+html[dir="ltr"] {
+  --dir: 1;
+  font-family: var(--font-en-sans);
+}
+
+/* Fluid Heading Scale */
+.text-display {
+  font-size: clamp(3rem, 7vw + 1rem, 7.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.text-h1 {
+  font-size: clamp(2.25rem, 5vw + 0.5rem, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+.text-h2 {
+  font-size: clamp(1.85rem, 3.5vw + 0.25rem, 3rem);
+  line-height: 1.18;
+}
+
+.text-h3 {
+  font-size: clamp(1.4rem, 2vw + 0.2rem, 2rem);
+  line-height: 1.25;
+}
+
+.text-h4 {
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.text-body {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+html[dir="rtl"] .text-body {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.text-eyebrow {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 500;
+}
+
+html[dir="rtl"] .text-eyebrow {
+  text-transform: none;
+  letter-spacing: 0;
+}

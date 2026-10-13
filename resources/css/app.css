@@ -1,0 +1,107 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+  --color-navy: #172A35;
+  --color-navy-dark: #0F1C23;
+  --color-navy-light: #233642;
+  --color-ivory: #F5F1E8;
+  --color-ivory-light: #FAF8F4;
+  --color-ivory-dark: #ECE5D7;
+  --color-greige: #C8C0B5;
+  --color-greige-light: #E4DFD8;
+  --color-greige-dark: #ADA294;
+  --color-slate: #596269;
+  --color-slate-light: #778087;
+  --color-slate-dark: #3E454B;
+  --color-champagne: #A99776;
+  --color-champagne-light: #C4B598;
+  --color-champagne-dark: #8A7755;
+
+  --font-serif: var(--font-en-serif);
+  --font-sans: var(--font-en-sans);
+  --font-ar-serif: var(--font-ar-serif);
+  --font-ar: var(--font-ar-sans);
+}
+
+@layer base {
+  body {
+    background-color: var(--c-ivory);
+    color: var(--c-navy);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--c-champagne);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--c-champagne);
+    outline-offset: 2px;
+  }
+
+  /* Sleek custom scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(169, 151, 118, 0.4);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(169, 151, 118, 0.8);
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(169, 151, 118, 0.4) transparent;
+  }
+}
+
+/* Custom architectural components */
+.hairline-border {
+  border-color: rgba(200, 192, 181, 0.4);
+}
+
+.hairline-border-dark {
+  border-color: rgba(23, 42, 53, 0.12);
+}
+
+.champagne-rule {
+  height: 1px;
+  background-color: var(--c-champagne);
+  opacity: 0.6;
+}
+
+.container-custom {
+  max-width: var(--max-width-container);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-custom {
+    padding-inline: 4rem;
+  }
+}

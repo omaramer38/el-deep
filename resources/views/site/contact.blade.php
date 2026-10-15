@@ -1,6 +1,6 @@
 @extends('layouts.site')
 
-@section('meta_title', app()->getLocale() === 'ar' ? 'اتصل بنا وطلب استشارة هندسية — الديب للمصاعد' : 'Contact Us & Request Consultation — EL DEEB')
+@section('meta_title', app()->getLocale() === 'ar' ? 'اتصل بنا وطلب معاينة — الديب للمصاعد' : 'Contact Us & Request Inspection — EL DEEB')
 
 @section('content')
 <section class="py-16 bg-[#172A35] text-[#F5F1E8] border-b border-[#233642]">

@@ -12,7 +12,7 @@ return [
         'blog' => 'Insights',
         'faq' => 'FAQ',
         'contact' => 'Contact',
-        'consultation' => 'Request Consultation',
+        'consultation' => 'Request Inspection',
     ],
     'footer' => [
         'description' => 'Premium architectural elevator and building systems engineered for safety, precision, and enduring performance.',

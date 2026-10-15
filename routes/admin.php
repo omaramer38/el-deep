@@ -36,7 +36,7 @@ Route::middleware(['auth', 'locale'])->prefix('admin')->name('admin.')->group(fu
 
     // Elevators & Categories
     Route::middleware('permission:elevators.delete')->delete('elevators/{elevator}/media/{media}', [ElevatorController::class, 'destroyMedia'])->name('elevators.media.destroy');
-    Route::middleware('permission:elevators.delete')->delete('elevators/{elevator}', [ElevatorController::class, 'destroy']);
+    Route::middleware('permission:elevators.delete')->delete('elevators/{elevator}', [ElevatorController::class, 'destroy'])->name('elevators.destroy');
     Route::middleware('permission:elevators.create')->group(function () {
         Route::get('elevators/create', [ElevatorController::class, 'create'])->name('elevators.create');
         Route::post('elevators', [ElevatorController::class, 'store'])->name('elevators.store');
@@ -54,7 +54,7 @@ Route::middleware(['auth', 'locale'])->prefix('admin')->name('admin.')->group(fu
 
     // Projects & Categories
     Route::middleware('permission:projects.delete')->delete('projects/{project}/media/{media}', [ProjectController::class, 'destroyMedia'])->name('projects.media.destroy');
-    Route::middleware('permission:projects.delete')->delete('projects/{project}', [ProjectController::class, 'destroy']);
+    Route::middleware('permission:projects.delete')->delete('projects/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy');
     Route::middleware('permission:projects.create')->group(function () {
         Route::get('projects/create', [ProjectController::class, 'create'])->name('projects.create');
         Route::post('projects', [ProjectController::class, 'store'])->name('projects.store');
@@ -70,7 +70,7 @@ Route::middleware(['auth', 'locale'])->prefix('admin')->name('admin.')->group(fu
     });
 
     // Services
-    Route::middleware('permission:services.delete')->delete('services/{service}', [ServiceController::class, 'destroy']);
+    Route::middleware('permission:services.delete')->delete('services/{service}', [ServiceController::class, 'destroy'])->name('services.destroy');
     Route::middleware('permission:services.create')->group(function () {
         Route::get('services/create', [ServiceController::class, 'create'])->name('services.create');
         Route::post('services', [ServiceController::class, 'store'])->name('services.store');

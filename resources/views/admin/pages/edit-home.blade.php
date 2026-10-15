@@ -56,22 +56,24 @@
     @endif
 
     <!-- Section Tabs -->
-    <div class="flex items-center gap-2 border-b border-[#E4DFD8] bg-white px-4 pt-2">
-        <button type="button" @click="activeTab = 'hero'" :class="activeTab === 'hero' ? 'border-[#A99776] text-[#172A35] font-bold border-b-2' : 'border-transparent text-[#778087] hover:text-[#172A35]'" class="px-4 py-2.5 text-xs uppercase tracking-wider transition-colors cursor-pointer">
+    <div class="bg-white border border-[#E4DFD8] shadow-xs">
+        <div class="flex items-center gap-2 border-b border-[#E4DFD8] px-4 pt-2 overflow-x-auto scrollbar-none">
+        <button type="button" @click="activeTab = 'hero'" :class="activeTab === 'hero' ? 'border-[#A99776] text-[#172A35] font-bold border-b-2' : 'border-transparent text-[#778087] hover:text-[#172A35]'" class="px-4 py-2.5 text-xs uppercase tracking-wider transition-colors cursor-pointer whitespace-nowrap shrink-0">
             1. {{ app()->getLocale() === 'ar' ? 'الهيرو الرئيسي' : 'Hero Banner' }}
         </button>
-        <button type="button" @click="activeTab = 'stats'" :class="activeTab === 'stats' ? 'border-[#A99776] text-[#172A35] font-bold border-b-2' : 'border-transparent text-[#778087] hover:text-[#172A35]'" class="px-4 py-2.5 text-xs uppercase tracking-wider transition-colors cursor-pointer">
+        <button type="button" @click="activeTab = 'stats'" :class="activeTab === 'stats' ? 'border-[#A99776] text-[#172A35] font-bold border-b-2' : 'border-transparent text-[#778087] hover:text-[#172A35]'" class="px-4 py-2.5 text-xs uppercase tracking-wider transition-colors cursor-pointer whitespace-nowrap shrink-0">
             2. {{ app()->getLocale() === 'ar' ? 'شريط الإحصائيات' : 'Stats Bar' }}
         </button>
-        <button type="button" @click="activeTab = 'about'" :class="activeTab === 'about' ? 'border-[#A99776] text-[#172A35] font-bold border-b-2' : 'border-transparent text-[#778087] hover:text-[#172A35]'" class="px-4 py-2.5 text-xs uppercase tracking-wider transition-colors cursor-pointer">
+        <button type="button" @click="activeTab = 'about'" :class="activeTab === 'about' ? 'border-[#A99776] text-[#172A35] font-bold border-b-2' : 'border-transparent text-[#778087] hover:text-[#172A35]'" class="px-4 py-2.5 text-xs uppercase tracking-wider transition-colors cursor-pointer whitespace-nowrap shrink-0">
             3. {{ app()->getLocale() === 'ar' ? 'نبذة التميز' : 'About Teaser' }}
         </button>
-        <button type="button" @click="activeTab = 'pillars'" :class="activeTab === 'pillars' ? 'border-[#A99776] text-[#172A35] font-bold border-b-2' : 'border-transparent text-[#778087] hover:text-[#172A35]'" class="px-4 py-2.5 text-xs uppercase tracking-wider transition-colors cursor-pointer">
+        <button type="button" @click="activeTab = 'pillars'" :class="activeTab === 'pillars' ? 'border-[#A99776] text-[#172A35] font-bold border-b-2' : 'border-transparent text-[#778087] hover:text-[#172A35]'" class="px-4 py-2.5 text-xs uppercase tracking-wider transition-colors cursor-pointer whitespace-nowrap shrink-0">
             4. {{ app()->getLocale() === 'ar' ? 'ركائز الأمان' : 'Pillars & Safety' }}
         </button>
-        <button type="button" @click="activeTab = 'cta'" :class="activeTab === 'cta' ? 'border-[#A99776] text-[#172A35] font-bold border-b-2' : 'border-transparent text-[#778087] hover:text-[#172A35]'" class="px-4 py-2.5 text-xs uppercase tracking-wider transition-colors cursor-pointer">
+        <button type="button" @click="activeTab = 'cta'" :class="activeTab === 'cta' ? 'border-[#A99776] text-[#172A35] font-bold border-b-2' : 'border-transparent text-[#778087] hover:text-[#172A35]'" class="px-4 py-2.5 text-xs uppercase tracking-wider transition-colors cursor-pointer whitespace-nowrap shrink-0">
             5. {{ app()->getLocale() === 'ar' ? 'الدعوة لطلب السعر' : 'Global CTA' }}
         </button>
+        </div>
     </div>
 
     <form method="POST" action="{{ route('admin.pages.update', $page) }}" enctype="multipart/form-data" class="space-y-6">
@@ -124,7 +126,7 @@
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-[#172A35] mb-1">نص الزر الثانوي (AR)</label>
-                        <input type="text" name="hero_cta2_text_ar" value="{{ old('hero_cta2_text_ar', $hero['cta_secondary']['text']['ar'] ?? 'طلب استشارة هندسية') }}" class="w-full text-xs px-3 py-2 bg-[#F8F9FA] border border-[#C8C0B5]">
+                        <input type="text" name="hero_cta2_text_ar" value="{{ old('hero_cta2_text_ar', $hero['cta_secondary']['text']['ar'] ?? 'طلب معاينة') }}" class="w-full text-xs px-3 py-2 bg-[#F8F9FA] border border-[#C8C0B5]">
                     </div>
                 </div>
             </div>
@@ -153,7 +155,7 @@
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-[#172A35] mb-1">Secondary CTA Text (EN)</label>
-                        <input type="text" name="hero_cta2_text_en" value="{{ old('hero_cta2_text_en', $hero['cta_secondary']['text']['en'] ?? 'Request Consultation') }}" class="w-full text-xs px-3 py-2 bg-[#F8F9FA] border border-[#C8C0B5]">
+                        <input type="text" name="hero_cta2_text_en" value="{{ old('hero_cta2_text_en', $hero['cta_secondary']['text']['en'] ?? 'Request Inspection') }}" class="w-full text-xs px-3 py-2 bg-[#F8F9FA] border border-[#C8C0B5]">
                     </div>
                 </div>
             </div>

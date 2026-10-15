@@ -136,7 +136,7 @@
                         {{ app()->getLocale() === 'ar' ? 'هل تخطط لمشروع مشابه؟' : 'Planning a Similar Architectural Project?' }}
                     </h3>
                     <p class="text-xs text-[#C8C0B5] leading-relaxed">
-                        {{ app()->getLocale() === 'ar' ? 'يمكننا تقديم استشارة هندسية ودراسة جدوى للأحمال الرأسية لمشروعك.' : 'Our engineering division can draft traffic analysis and turnkey solutions for your development.' }}
+                        {{ app()->getLocale() === 'ar' ? 'يمكننا تقديم معاينة ودراسة جدوى للأحمال الرأسية لمشروعك.' : 'Our engineering division can draft traffic analysis and turnkey solutions for your development.' }}
                     </p>
                     <a href="{{ route('site.contact', ['locale' => app()->getLocale()]) }}" class="block text-center bg-[#A99776] hover:bg-[#C4B598] text-[#0F1C23] py-3.5 text-xs uppercase tracking-widest font-bold transition-colors">
                         {{ __('site.nav.consultation') }} &rarr;

@@ -104,7 +104,7 @@
                         {{ __('site.common.request_quote') }}
                     </div>
                     <h3 class="text-xl font-serif font-bold">
-                        {{ app()->getLocale() === 'ar' ? 'طلب عرض سعر واستشارة' : 'Consultation for this System' }}
+                        {{ app()->getLocale() === 'ar' ? 'طلب معاينة' : 'Request Inspection' }}
                     </h3>
                     <p class="text-xs text-[#C8C0B5] leading-relaxed">
                         {{ app()->getLocale() === 'ar' ? 'مهندسونا على استعداد لحساب الأحمال وسرعات النقل المطلوبة لمشروعك.' : 'Our engineers will calculate traffic flow, shaft requirements, and power loads for your building.' }}

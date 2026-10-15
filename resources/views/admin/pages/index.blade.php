@@ -21,8 +21,9 @@
         </a>
     </div>
 
-    <div class="bg-white border border-[#E4DFD8] overflow-hidden shadow-xs">
-        <table class="w-full text-start text-xs border-collapse">
+    <div class="bg-white border border-[#E4DFD8] shadow-xs overflow-hidden">
+        <div class="overflow-x-auto">
+        <table class="w-full text-start text-xs border-collapse min-w-[600px]">
             <thead>
                 <tr class="bg-[#172A35] text-[#F5F1E8] uppercase tracking-wider text-[10px]">
                     <th class="py-3 px-4 text-start w-28">{{ app()->getLocale() === 'ar' ? 'المعرّف' : 'Identifier' }}</th>
@@ -70,6 +71,7 @@
                 @endforeach
             </tbody>
         </table>
+        </div>
     </div>
 </div>
 @endsection

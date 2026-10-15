@@ -61,16 +61,9 @@
                         $brandSubtitle = $isAr ? 'للمصاعد وأنظمة المباني' : 'ELEVATOR & BUILDING SYSTEM';
                     @endphp
                     @if($customHeaderLogo)
-                        <img src="{{ $customHeaderLogo }}" alt="{{ $brandTitle }}" class="h-10 md:h-12 w-auto object-contain">
+                        <img src="{{ $customHeaderLogo }}" alt="EL DEEB" class="h-10 md:h-12 w-auto object-contain">
                     @else
-                        <div class="flex flex-col text-start leading-none select-none">
-                            <span class="font-serif text-2xl md:text-[26px] font-bold tracking-[0.12em] text-[#172A35] group-hover:text-[#A99776] transition-colors whitespace-nowrap">
-                                {{ $brandTitle }}
-                            </span>
-                            <span class="text-[9px] uppercase tracking-[0.22em] text-[#596269] font-medium mt-1.5 font-sans whitespace-nowrap">
-                                {{ $brandSubtitle }}
-                            </span>
-                        </div>
+                        <img src="{{ asset('images/brand/PN 2.png') }}" alt="EL DEEB" class="h-10 md:h-12 w-auto object-contain" style="filter: brightness(0);">
                     @endif
                 </a>
 

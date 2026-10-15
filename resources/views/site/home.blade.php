@@ -41,7 +41,7 @@
     $heroCta1Url = !empty($hero['cta_primary']['url']) ? $hero['cta_primary']['url'] : route('site.elevators.index', ['locale' => $locale]);
     $heroCta1Text = $hero['cta_primary']['text'][$locale] ?? ($locale === 'ar' ? 'استكشف الحلول والمصاعد' : 'Explore Our Solutions');
     $heroCta2Url = !empty($hero['cta_secondary']['url']) ? $hero['cta_secondary']['url'] : route('site.contact', ['locale' => $locale]);
-    $heroCta2Text = $hero['cta_secondary']['text'][$locale] ?? ($locale === 'ar' ? 'طلب استشارة هندسية' : 'Request Consultation');
+    $heroCta2Text = $hero['cta_secondary']['text'][$locale] ?? ($locale === 'ar' ? 'طلب معاينة' : 'Request Inspection');
 @endphp
 
 <!-- 1. Hero Section -->

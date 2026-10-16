@@ -42,10 +42,10 @@ Route::prefix('{locale}')
         Route::get('/faq', [SiteController::class, 'faq'])->name('faq');
         Route::get('/contact', [SiteController::class, 'contact'])->name('contact');
         Route::post('/contact', [ContactController::class, 'submit'])
-            ->middleware([\Spatie\Honeypot\ProtectWithHoneypot::class, 'throttle:5,1'])
+            ->middleware([\Spatie\Honeypot\ProtectAgainstSpam::class, 'throttle:5,1'])
             ->name('contact.submit');
         Route::post('/newsletter', [NewsletterController::class, 'subscribe'])
-            ->middleware([\Spatie\Honeypot\ProtectWithHoneypot::class, 'throttle:5,1'])
+            ->middleware([\Spatie\Honeypot\ProtectAgainstSpam::class, 'throttle:5,1'])
             ->name('newsletter.subscribe');
 
         // CMS Legal Pages
